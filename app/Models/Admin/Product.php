@@ -37,7 +37,6 @@ class Product extends Model
             $products = $products ->get();
         }
         // $sql = DB::getQueryLog();
-        // dd($sql);
         return $products;
     }
 

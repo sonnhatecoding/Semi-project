@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\OrderDetailController;
 use App\Http\Controllers\Admin\InventoryVouchersController;
 use App\Http\Controllers\Admin\IVDetailController;
+use App\Http\Controllers\User\FrontEndController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,8 +27,13 @@ use App\Http\Controllers\Admin\IVDetailController;
 |
 */
 route::get('/', function(){
-    echo 'trang view';
+    return view('users.index');
 });
+//cart
+Route::get('/cart', [FrontEndController::class, 'cart'])->name('cart');
+Route::get('/detail', [FrontEndController::class, 'detail'])->name('detail');
+
+
 
 // Admin
 Route::prefix('admin')->name('admin.')->group(function(){

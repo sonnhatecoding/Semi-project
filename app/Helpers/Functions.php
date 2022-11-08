@@ -4,6 +4,7 @@ use App\Models\Admin\Company;
 use App\Models\Admin\Brand;
 use App\Models\Admin\Color;
 use App\Models\Admin\Product;
+use App\Models\Admin\ProductUser;
 
 function getAllUserRoles(){
     $user_role = new UserRole();
@@ -27,5 +28,13 @@ function getAllColors(){
 
 function getAllProducts(){
     $products = new Product();
-    return $products->getAllProducts();
+     $products->getAllProducts();
+     return $products;
+}
+
+function getProductsUser(){
+    $products = new ProductUser();
+     $l = $products->getProductsUser();
+     //dd($l);
+     return $l;
 }
