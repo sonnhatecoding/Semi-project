@@ -31,6 +31,7 @@ Route::get('/', [FrontEndController::class, 'index'])->name('index');
 //cart
 Route::get('/cart', [FrontEndController::class, 'cart'])->name('cart');
 Route::get('detail/{id}', [FrontEndController::class, 'detail'])->name('detail');
+Route::get('category', [FrontEndController::class, 'category'])->name('category');
 
 
 

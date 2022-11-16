@@ -13,8 +13,8 @@
             <p>Very us move be blessed multiply night</p>
           </div>
           <div class="page_link">
-            <a href="index.html">Home</a>
-            <a href="single-product.html">Product Details</a>
+            <a href="{{Route('index')}}">Home</a>
+            <a >Product Details</a>
           </div>
         </div>
       </div>

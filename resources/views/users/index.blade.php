@@ -13,22 +13,22 @@
         </div>
       </div>
 
+      <form action="" method="GET" class="mb-3" >
       <div class="flex-w flex-sb-m p-b-52">
         <div class="flex-w flex-l-m filter-tope-group m-tb-10">
             @if (!empty(getAllBrands()))
               @foreach(getAllBrands() as $item)
-                  <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".loai-{{ $item->brand_id }}">
-                    <img src="images/brand/{{$item->brand_logo}}" style ="width: 90px; height:30px ">
-                  </button>
-                  @endforeach
-              </div>
+                <button type="submit" class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".loai-{{ $item->brand_id }}">
+                  <img src="images/brand/{{$item->brand_logo}}" style ="width: 90px; height:30px ">
+                </button>
+              @endforeach
             @endif
+        </div>
       </div>
       <br>
 
-      <form action="" method="GET" class="mb-3" >
+      {{-- <form action="" method="GET" class="mb-3" > --}}
         <div class="row">
-
             <div class="col-1" >
                 <select class="form-control" name="brands">
                     <option value="0">Brands</option>
@@ -122,9 +122,6 @@
                         <a href="{{route('detail', ['id' => $item->pro_id])}}">
                           <i class="ti-eye"></i>
                         </a>
-                        <a href="#">
-                          <i class="ti-heart"></i>
-                        </a>
                         <a href="cart">
                           <i class="ti-shopping-cart"></i>
                         </a>
@@ -135,8 +132,8 @@
                         <h4>{{$item ->pro_name}}</h4>
                       </a>
                       <div class="mt-3">
-                        <span class="mr-4">{{$item ->pro_reducedPrice}}</span>
-                        <del>{{$item ->pro_price}}</del>
+                        <span class="mr-4">${{$item ->pro_reducedPrice}}</span>
+                        <del>${{$item ->pro_price}}</del>
                       </div>
                     </div>
                   </div>
