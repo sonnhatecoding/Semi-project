@@ -26,12 +26,11 @@ use App\Http\Controllers\User\FrontEndController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-route::get('/', function(){
-    return view('users.index');
-});
+
+Route::get('/', [FrontEndController::class, 'index'])->name('index');
 //cart
 Route::get('/cart', [FrontEndController::class, 'cart'])->name('cart');
-Route::get('/detail', [FrontEndController::class, 'detail'])->name('detail');
+Route::get('detail/{id}', [FrontEndController::class, 'detail'])->name('detail');
 
 
 

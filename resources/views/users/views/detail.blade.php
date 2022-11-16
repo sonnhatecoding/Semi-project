@@ -36,21 +36,11 @@
               <ol class="carousel-indicators">
                 <li
                   data-target="#carouselExampleIndicators"
-                  data-slide-to="0"
-                  class="active"
-                >
-                  <img
-                    src="img/product/single-product/s-product-s-2.jpg"
-                    alt=""
-                  />
-                </li>
-                <li
-                  data-target="#carouselExampleIndicators"
                   data-slide-to="1"
                 >
                   <img
-                    src="img/product/single-product/s-product-s-3.jpg"
-                    alt=""
+                    src="images/product/{{$productDetail->pro_image}}"
+                    alt="" style ="width: 60px; height:60 "
                   />
                 </li>
                 <li
@@ -58,30 +48,72 @@
                   data-slide-to="2"
                 >
                   <img
-                    src="img/product/single-product/s-product-s-4.jpg"
-                    alt=""
+                    src="images/product/{{$productDetail->pro_image1}}"
+                    alt="" style ="width: 60px; height:60 "
+                  />
+                </li>
+                <li
+                  data-target="#carouselExampleIndicators"
+                  data-slide-to="3"
+                >
+                  <img
+                    src="images/product/{{$productDetail->pro_image2}}"
+                    alt="" style ="width: 60px; height:60 "
+                  />
+                </li>
+                <li
+                  data-target="#carouselExampleIndicators"
+                  data-slide-to="4"
+                >
+                  <img
+                    src="images/product/{{$productDetail->pro_image3}}"
+                    alt="" style ="width: 60px; height:60 "
+                  />
+                </li>
+                <li
+                  data-target="#carouselExampleIndicators"
+                  data-slide-to="5"
+                >
+                  <img
+                    src="images/product/{{$productDetail->pro_image4}}"
+                    alt="" style ="width: 60px; height:60 "
                   />
                 </li>
               </ol>
+
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img
                     class="d-block w-100"
-                    src="img/product/single-product/s-product-1.jpg"
+                    src="images/product/{{$productDetail->pro_image}}"
                     alt="First slide"
                   />
                 </div>
                 <div class="carousel-item">
                   <img
                     class="d-block w-100"
-                    src="img/product/single-product/s-product-1.jpg"
+                    src="images/product/{{$productDetail->pro_image1}}"
                     alt="Second slide"
                   />
                 </div>
                 <div class="carousel-item">
                   <img
                     class="d-block w-100"
-                    src="img/product/single-product/s-product-1.jpg"
+                    src="images/product/{{$productDetail->pro_image2}}"
+                    alt="Third slide"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    class="d-block w-100"
+                    src="images/product/{{$productDetail->pro_image3}}"
+                    alt="Third slide"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    class="d-block w-100"
+                    src="images/product/{{$productDetail->pro_image4}}"
                     alt="Third slide"
                   />
                 </div>
@@ -91,24 +123,38 @@
         </div>
         <div class="col-lg-5 offset-lg-1">
           <div class="s_product_text">
-            <h3>Faded SkyBlu Denim Jeans</h3>
-            <h2>$149.99</h2>
+            <h3 >{{$productDetail->pro_name}}</h3>
+            <h2>${{$productDetail->pro_reducedPrice}}</h2>
             <ul class="list">
               <li>
-                <a class="active" href="#">
-                  <span>Category</span> : Household</a
+                <a> <span>Brand</span> : {{$productDetail->brand_id}}</a
                 >
               </li>
               <li>
-                <a href="#"> <span>Availibility</span> : In Stock</a>
+                <a> <span>Color</span> : {{$productDetail->color_id}}</a>
               </li>
-            </ul>
+              <li>
+                <a> <span>Ram</span> : {{$productDetail->color_id}}</a>
+              </li>
+              <li>
+                <a> <span>Internal memory</span> : {{$productDetail->pro_iMemory}}</a>
+              </li>
+              <li>
+                <a> <span>Operating system</span> : {{$productDetail->pro_oSystem}}</a>
+              </li>
+              <li>
+                <a> <span>Warranty period</span> : {{$productDetail->pro_warrantyPeriod}}</a>
+              </li>
+              <li>
+                <a> <span>Origin</span> : {{$productDetail->pro_origin}}</a>
+              </li>
+              <li>
+                <a> <span>Launch Date</span> : {{$productDetail->pro_launchDate}}</a>
+              </li>
             <p>
-              Mill Oil is an innovative oil filled radiator with the most
-              modern technology. If you are looking for something that can
-              make your interior look awesome, and at the same time give you
-              the pleasant warm feeling during the winter.
+              {{$productDetail->pro_description}}
             </p>
+            
             <div class="product_count">
               <label for="qty">Quantity:</label>
               <input

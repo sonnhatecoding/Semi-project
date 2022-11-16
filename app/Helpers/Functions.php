@@ -6,6 +6,7 @@ use App\Models\Admin\Color;
 use App\Models\Admin\Product;
 use App\Models\Admin\ProductUser;
 
+
 function getAllUserRoles(){
     $user_role = new UserRole();
     return $user_role->getAll();

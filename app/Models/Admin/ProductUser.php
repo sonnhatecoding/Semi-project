@@ -13,7 +13,7 @@ class ProductUser extends Model
 
     Protected $table = 'products';
 
-    public function getProductsUser(){
+    public function getProductsUser($filters = [],$keywords = null){
         //DB::enableQueryLog(); 
 
         $products = DB::table($this->table)
@@ -22,8 +22,24 @@ class ProductUser extends Model
         ->join('brands', 'products.brand_id', '=', 'brands.brand_id')
         ->orderBy('products.pro_name', 'ASC')
         ->limit(9)
-        ->offSet(1)
-        ->get(); //return du lieu kieu "collections"
+        ->offSet(1);
+
+        if(!empty($filters)){
+            $products =$products->where($filters);
+        }
+
+        if(!empty($keywords)){
+            $products =$products->where(function($query) use ($keywords){
+                $query->orWhere('pro_name', 'LIKE', '%'.$keywords.'%');
+            });
+        }
+
+        $products = $products ->get();
+        // ->get(); //return du lieu kieu "collections"
         return $products;
+    }
+
+    public function getDetail($id){
+        return DB::select('SELECT * FROM '.$this ->table.' WHERE pro_id = ?', [$id]);
     }
 }
