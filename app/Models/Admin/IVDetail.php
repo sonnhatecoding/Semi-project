@@ -14,7 +14,6 @@ class IVDetail extends Model
     Protected $table = 'inventory_vouchers_detail';
 
     public function getDetailInventoryVouchers($id){
-        //DB::enableQueryLog(); 
         $ivDetail = DB::table($this->table)
         ->select('inventory_vouchers_detail.*','products.pro_name','products.pro_oSystem','products.pro_ram','products.pro_ram','products.pro_image','units.unit_name','companys.cp_name', 'brands.brand_logo','colors.color_name')
         ->join('inventory_vouchers', 'inventory_vouchers_detail.iv_id', '=', 'inventory_vouchers.iv_id')
@@ -25,8 +24,27 @@ class IVDetail extends Model
         ->join('companys', 'units.cp_id', '=', 'companys.cp_id')
         ->where('inventory_vouchers_detail.iv_id', '=', $id)
         ->get();
-        //$sql = DB::getQueryLog();
-        //dd($sql);
         return $ivDetail;
+    }
+
+    public function getEdit($id){
+        $ivDetail = DB::table($this->table)
+        ->select('inventory_vouchers_detail.*','products.pro_price')
+        ->join('products', 'inventory_vouchers_detail.pro_id', '=', 'products.pro_id')
+        ->where('ivd_id', '=' ,$id)
+        ->get();
+        return $ivDetail;
+    }
+
+    public function postEditIvDetail($data, $id){
+        return DB::table($this->table)
+        ->where('ivd_id', '=', $id)
+        ->update($data);
+    }
+
+    public function deleteIvDetail($id){
+        return DB::table($this->table)
+        ->where('ivd_id', '=', $id)
+        ->delete();
     }
 }

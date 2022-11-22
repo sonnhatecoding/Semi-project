@@ -72,7 +72,7 @@
                         <td>{{$item->unit_email}}</td>
                         <td>{{$item->unit_phoneNumber}}</td>
                         <td>{{$item->iv_quantity}}</td>
-                        <td>{{$item->iv_total}}</td>
+                        <td>${{$item->iv_total}}</td>
                         <td>{{$item->unit_address}}</td>
                         <td>{{$item->user_name}}</td>
                         <td>{{$item->iv_date}}</td>

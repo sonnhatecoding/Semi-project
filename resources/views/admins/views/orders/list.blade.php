@@ -58,7 +58,7 @@
                         <td>{{$item->user_email}}</td>
                         <td>{{$item->user_phoneNumber}}</td>
                         <td>{{$item->order_quantity}}</td>
-                        <td>{{$item->order_total}}</td>
+                        <td>${{$item->order_total}}</td>
                         <td>{!! $item->order_status==0?'<button class="btn btn-success btn-sm">Successful</button>':'<button class="btn btn-danger btn-sm">Failure</button>' !!}</td>
                         <td>{{$item->user_address}}</td>
                         <td>{{$item->order_createAt	}}</td>

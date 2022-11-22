@@ -124,13 +124,13 @@
                         <td>{{$item->pro_name}}</td>
                         <td><img src="images/brand/{{$item->brand_logo}}" style ="width: 100px;"></td>
                         <td>{{$item->colors}}</td>
-                        <td>{{$item->pro_ram}}</td>
-                        <td>{{$item->pro_iMemory}}</td>
+                        <td>{{$item->pro_ram}} GB</td>
+                        <td>{{$item->pro_iMemory}} GB</td>
                         <td>{{$item->pro_oSystem}}</td>
-                        <td>{{$item->pro_warrantyPeriod}}</td>
+                        <td>{{$item->pro_warrantyPeriod}} Month</td>
                         <td>{{$item->pro_origin}}</td>
-                        <td>{{$item->pro_price}}</td>
-                        <td>{{$item->pro_reducedPrice}}</td>
+                        <td>${{$item->pro_price}}</td>
+                        <td>${{$item->pro_reducedPrice}}</td>
                         <td>{{$item->pro_launchDate}}</td>
                         <td>
                             <a href="{{route('admin.product.image', ['id' => $item->pro_id])}}" class="btn btn-success btn-sm">Image</a>

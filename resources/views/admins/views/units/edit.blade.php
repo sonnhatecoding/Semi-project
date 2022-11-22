@@ -58,7 +58,7 @@
             @enderror
         </div>
 
-        <button type="submit" class="btn btn-primary">Add</button>
+        <button type="submit" class="btn btn-primary">Edit</button>
         <a href="{{route('admin.unit.index')}} " class="btn btn-warning">Back</a>
         @csrf
     </form>

@@ -39,15 +39,15 @@
                         <td>{{$item->pro_name}}</td>
                         <td>{{$item->color_name}}</td>
                         <td><img src="images/brand/{{$item->brand_logo}}" style ="width: 100px;"></td>
-                        <td>{{$item->pro_ram}}</td>
-                        <td>{{$item->pro_iMemory}}</td>
+                        <td>{{$item->pro_ram}} GB</td>
+                        <td>{{$item->pro_iMemory}} GB</td>
                         <td>{{$item->pro_oSystem}}</td>
-                        <td>{{$item->pro_warrantyPeriod}}</td>
+                        <td>{{$item->pro_warrantyPeriod}} Month</td>
                         <td><img src="images/product/{{$item->pro_image}}" style ="width: 100px;"></td>
-                        <td>{{$item->pro_price}}</td>
-                        <td>{{$item->pro_reducedPrice}}</td>
+                        <td>${{$item->pro_price}}</td>
+                        <td>${{$item->pro_reducedPrice}}</td>
                         <td>{{$item->od_quantity}}</td>
-                        <td>{{$item->od_total}}</td>
+                        <td>${{$item->od_total}}</td>
                         <td>
                             <a href="{{route('admin.order.order-detail.edit', ['id' => $item->od_id])}}" class="btn btn-warning btn-sm">Edit</a>
                         </td>

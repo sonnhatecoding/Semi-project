@@ -24,6 +24,8 @@
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Total</th>
+                <th width= "4%">Edit</th>
+                <th width= "4%">Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -39,9 +41,15 @@
                         <td>{{$item->pro_ram}}</td>
                         <td>{{$item->pro_oSystem}}</td>
                         <td><img src="images/product/{{$item->pro_image}}" style ="width: 100px;"></td>
-                        <td>{{$item->iv_price}}</td>
+                        <td>${{$item->iv_price}}</td>
                         <td>{{$item->iv_quantity}}</td>
-                        <td>{{$item->iv_total}}</td>
+                        <td>${{$item->iv_total}}</td>
+                        <td>
+                            <a href="{{route('admin.inventory-vouchers.inventory-vouchers-detail.edit', ['id' => $item->ivd_id])}}" class="btn btn-warning btn-sm">Edit</a>
+                        </td>
+                        <td>
+                            <a onclick="return confirm('Are you sure you want to delete?')" href="{{route('admin.inventory-vouchers.inventory-vouchers-detail.delete', ['id' => $item->ivd_id ])}}" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
                     </tr>
                 @endforeach
             @else 

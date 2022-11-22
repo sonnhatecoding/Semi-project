@@ -28,7 +28,6 @@ use App\Http\Controllers\User\FrontEndController;
 */
 
 Route::get('/', [FrontEndController::class, 'index'])->name('index');
-//cart
 Route::get('/cart', [FrontEndController::class, 'cart'])->name('cart');
 Route::get('detail/{id}', [FrontEndController::class, 'detail'])->name('detail');
 Route::get('category', [FrontEndController::class, 'category'])->name('category');
@@ -37,130 +36,100 @@ Route::get('category', [FrontEndController::class, 'category'])->name('category'
 
 // Admin
 Route::prefix('admin')->name('admin.')->group(function(){
-
     Route::get('/', [MyController::class, 'index'])->name('index');
 
-    // quản lý Users
+    // manage Users
     Route::prefix('user')->name('user.')->group(function(){
         Route::get('/', [UserController::class, 'index'])->name('index');
-        //thêm người dùng
         Route::get('add', [UserController::class, 'getAdd'])->name('add');
         Route::post('add', [UserController::class, 'postAdd']);
-        // edit người dùng
         Route::get('edit/{id}', [UserController::class, 'getEdit'])->name('edit');
         Route::post('update', [UserController::class, 'postEdit'])->name('postEdit');
-        //xóa người dùng
         Route::get('delete/{id}', [UserController::class, 'delete'])->name('delete');
     });
 
-    // quản lý công ty
+    // manage Company
     Route::prefix('company')->name('company.')->group(function(){
         Route::get('/', [CompanyController::class, 'index'])->name('index');
-        //thêm người dùng
         Route::get('add', [CompanyController::class, 'getAdd'])->name('add');
         Route::post('add', [CompanyController::class, 'postAdd']);
-        // edit người dùng
         Route::get('edit/{id}', [CompanyController::class, 'getEdit'])->name('edit');
         Route::post('update', [CompanyController::class, 'postEdit'])->name('postEdit');
-        //xóa người dùng
         Route::get('delete/{id}', [CompanyController::class, 'delete'])->name('delete');
     });
 
-    // quản lý Đơn vị của công ty
+    // manage Unit of companys
     Route::prefix('unit')->name('unit.')->group(function(){
         Route::get('/', [UnitController::class, 'index'])->name('index');
-        //thêm đơn vị
         Route::get('add', [UnitController::class, 'getAdd'])->name('add');
         Route::post('add', [UnitController::class, 'postAdd']);
-        // edit đơn vị
         Route::get('edit/{id}', [UnitController::class, 'getEdit'])->name('edit');
         Route::post('update', [UnitController::class, 'postEdit'])->name('postEdit');
-        //xóa đơn vị
         Route::get('delete/{id}', [UnitController::class, 'delete'])->name('delete');
     });
 
-    // quản lý thuong hieu
+    // manage Brands
     Route::prefix('brand')->name('brand.')->group(function(){
         Route::get('/', [BrandController::class, 'index'])->name('index');
-        //thêm thuong hieu
         Route::get('add', [BrandController::class, 'getAdd'])->name('add');
         Route::post('add', [BrandController::class, 'postAdd']);
-        // edit thuong hieu
         Route::get('edit/{id}', [BrandController::class, 'getEdit'])->name('edit');
         Route::post('update', [BrandController::class, 'postEdit'])->name('postEdit');
-        //xóa thuong hieu
         Route::get('delete/{id}', [BrandController::class, 'delete'])->name('delete');
     });
 
-    // quản lý mau sac
+    // manage Colors
     Route::prefix('color')->name('color.')->group(function(){
         Route::get('/', [ColorController::class, 'index'])->name('index');
-        //thêm mau sac
         Route::get('add', [ColorController::class, 'getAdd'])->name('add');
         Route::post('add', [ColorController::class, 'postAdd']);
-        // edit mau sac
         Route::get('edit/{id}', [ColorController::class, 'getEdit'])->name('edit');
         Route::post('update', [ColorController::class, 'postEdit'])->name('postEdit');
-        //xóa mau sac
         Route::get('delete/{id}', [ColorController::class, 'delete'])->name('delete');
     });
 
-    // quản lý san pham
+    // manage Products
     Route::prefix('product')->name('product.')->group(function(){
         Route::get('/', [ProductController::class, 'index'])->name('index');
-        //thêm mau sac
         Route::get('add', [ProductController::class, 'getAdd'])->name('add');
         Route::post('add', [ProductController::class, 'postAdd']);
-
-        //image
         Route::get('image/{id}', [ProductController::class, 'image'])->name('image');
-
-        // edit mau sac
         Route::get('edit/{id}', [ProductController::class, 'getEdit'])->name('edit');
         Route::post('update', [ProductController::class, 'postEdit'])->name('postEdit');
-        //xóa mau sac
         Route::get('delete/{id}', [ProductController::class, 'delete'])->name('delete');
     });
 
-    // quản lý order
+    // manage orders
     Route::prefix('order')->name('order.')->group(function(){
         Route::get('/', [OrderController::class, 'index'])->name('index');
-
-        // quản lý order detail
+        // manage order detail
         Route::prefix('order-detail')->name('order-detail.')->group(function(){
             Route::get('/{id}', [OrderDetailController::class, 'index'])->name('index');
-
             Route::get('edit/{id}', [OrderDetailController::class, 'getEdit'])->name('edit');
             Route::post('update', [OrderDetailController::class, 'postEdit'])->name('postEdit');
-
             Route::get('delete/{id}', [OrderDetailController::class, 'delete'])->name('delete');
         });
-
         Route::get('edit/{id}', [OrderController::class, 'getEdit'])->name('edit');
         Route::post('update', [OrderController::class, 'postEdit'])->name('postEdit');
-
         Route::get('delete/{id}', [OrderController::class, 'delete'])->name('delete');
     });
 
-    // quản lý InventoryVouchers
+    // manage Inventory Vouchers
     Route::prefix('inventory-vouchers')->name('inventory-vouchers.')->group(function(){
         Route::get('/', [InventoryVouchersController::class, 'index'])->name('index');
-
-        // quản lý InventoryVouchers detail
+        // manage InventoryVouchers detail
         Route::prefix('inventory-vouchers-detail')->name('inventory-vouchers-detail.')->group(function(){
             Route::get('/{id}', [IVDetailController::class, 'index'])->name('index');
+            Route::get('edit/{id}', [IVDetailController::class, 'getEdit'])->name('edit');
+            Route::post('update', [IVDetailController::class, 'postEdit'])->name('postEdit');
+            Route::get('delete/{id}', [IVDetailController::class, 'delete'])->name('delete');
         });
-
         Route::get('edit/{id}', [InventoryVouchersController::class, 'getEdit'])->name('edit');
         Route::post('update', [InventoryVouchersController::class, 'postEdit'])->name('postEdit');
-
         Route::get('delete/{id}', [InventoryVouchersController::class, 'delete'])->name('delete');
     });
     
 });
-
-
-
 
 
 
@@ -231,7 +200,6 @@ Route::prefix('admin')->name('admin.')->group(function(){
             $table-> float('iv_total')->unsigned()->nullable();
             $table-> date('iv_date')->nullable(); 
             $table-> timestamp('iv_createAt')->nullable(); 
-
             $table->foreign('unit_id')->references('unit_id')->on('units');
             $table->foreign('user_id')->references('user_id')->on('users');
         }); 
@@ -257,7 +225,8 @@ Route::prefix('admin')->name('admin.')->group(function(){
     //Brands
     Route::get('/brands', function(){ 
         Schema::create('brands', function($table){ 
-            $table->increments('brand_id'); 
+            $table->increments('brand_id');
+            $table-> string('brand_logo', 50)->nullable();
             $table-> string('brand_name',200)->nullable(); 
         }); 
         echo "Đã tạo bảng brands thành công"; 
@@ -347,17 +316,5 @@ Route::prefix('admin')->name('admin.')->group(function(){
         echo "Đã tạo bảng order_detail thành công"; 
     });
 
-    //Banners
-    Route::get('/banners', function(){ 
-        Schema::create('banners', function($table){ 
-            $table->increments('banner_id'); 
-            $table-> string('banner1',200)->nullable();
-            $table-> string('banner2',200)->nullable();
-            $table-> string('banner3',200)->nullable();
-            $table-> string('banner4',200)->nullable();
-            $table-> string('banner5',200)->nullable();
-        }); 
-        echo "Đã tạo bảng Banners thành công"; 
-    });
 
 

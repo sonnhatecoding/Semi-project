@@ -50,41 +50,39 @@ class OrderDetailController extends Controller
             return back()->with ('msg', 'Link does not exist!');
         }
 
-        $quanlity = 0;
-        $total = 0;
+        // $quanlity = 0;
+        // $total = 0;
 
-        $edit_order_detai = DB::select('SELECT * FROM order_detail WHERE od_id = ?', [$id]);
-        $temp = $edit_order_detai[0]-> order_id;
+        // $edit_order_detai = DB::select('SELECT * FROM order_detail WHERE od_id = ?', [$id]);
+        // $temp = $edit_order_detai[0]-> order_id;
 
-        $order = DB::table('order_detail')
-        ->select('order_detail.*','products.pro_price')
-        ->join('products', 'order_detail.pro_id', '=', 'products.pro_id')
-        ->where('order_id', '=' ,$temp)
-        ->get()
-        ->toArray();
+        // $order = DB::table('order_detail')
+        // ->select('order_detail.*','products.pro_price')
+        // ->join('products', 'order_detail.pro_id', '=', 'products.pro_id')
+        // ->where('order_id', '=' ,$temp)
+        // ->get()
+        // ->toArray();
 
-        foreach ($order as $update){
-            $quanlity += $update -> od_quantity;
-            $total += ($update -> od_quantity * $update -> pro_price);
-        }
+        // foreach ($order as $update){
+        //     $quanlity += $update -> od_quantity;
+        //     $total += ($update -> od_quantity * $update -> pro_price);
+        // }
 
         $dataUpdateOrderDetail = [
             'od_quantity' => $request->od_quantity,
             'od_total' => $request->od_quantity*$request->pro_price
         ];
 
-        $dataUpdateOrder = [
-            'order_quantity' => $quanlity,
-            'order_total' => $total
-        ];
+        // $dataUpdateOrder = [
+        //     'order_quantity' => $quanlity,
+        //     'order_total' => $total
+        // ];
 
         //dd($dataUpdateOrder);
-        $this->order_detail -> postEditOrder($dataUpdateOrder);
-        //$this->order_detail -> postEditOrderDetail($dataUpdateOrderDetail, $id);
-        //$this->order_detail -> postEditOrder($dataUpdateOrder);
+        // $this->order_detail -> postEditOrder($dataUpdateOrder);
+        $this->order_detail -> postEditOrderDetail($dataUpdateOrderDetail, $id);
         
-
-        //return redirect()->route('admin.order.index')->with('msg', 'Update order information successfully!');
+        return redirect()->route('admin.order.index')->with('msg', 'Update order information successfully!');
     }
 
     public function delete($id = 0){

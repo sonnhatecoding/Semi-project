@@ -68,17 +68,16 @@ class OrderDetail extends Model
         ->update($data);
     }
 
-    public function postEditOrder($data){
-        DB::enableQueryLog(); 
-        return DB::table('orders')
-        ->select('order_detail.*','orders.*')
-        ->join('order_detail', 'order_detail.order_id', '=', 'orders.order_id')
-        ->where('orders.order_id', '=', 'order_detail.order_id')
-        ->update($data);
-        $sql = DB::getQueryLog();
-        dd($sql);
-
-    }
+    // public function postEditOrder($data){
+    //     DB::enableQueryLog(); 
+    //     return DB::table('orders')
+    //     ->select('order_detail.*','orders.*')
+    //     ->join('order_detail', 'order_detail.order_id', '=', 'orders.order_id')
+    //     ->where('orders.order_id', '=', 'order_detail.order_id')
+    //     ->update($data);
+    //     $sql = DB::getQueryLog();
+    //     dd($sql);
+    // }
 
     public function deleteOrderDetail($id){
         return DB::table($this->table)

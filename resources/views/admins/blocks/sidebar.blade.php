@@ -6,7 +6,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fa-solid fa-file"></i>
         </div>
-        <div class="sidebar-brand-text mx-3"> REW 52</div>
+        <div class="sidebar-brand-text mx-3"> DMS</div>
     </a>
 
     <!-- Divider -->
