@@ -27,7 +27,6 @@
       </div>
       <br>
 
-      {{-- <form action="" method="GET" class="mb-3" > --}}
         <div class="row">
             <div class="col-1" >
                 <select class="form-control" name="brands">

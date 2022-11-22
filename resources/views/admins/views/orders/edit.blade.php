@@ -24,14 +24,6 @@
             @enderror
         </div>
 
-        <div class="mb-3">
-            <label for="">Quatity</label>
-            <input type="text" class="form-control" name="order_quantity" value=" {{$orderDetail->order_quantity}}">
-            @error('order_quantity')
-                <span style="color: red">{{$message}} </span>
-            @enderror
-        </div>
-
         <button type="submit" class="btn btn-primary">Update</button>
         <a href="{{route('admin.order.index')}} " class="btn btn-warning">Back</a>
         @csrf
