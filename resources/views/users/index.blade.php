@@ -102,7 +102,7 @@
 
             <div class="input-group-append">
                 <button class="btn btn-primary" type="submit">
-                    <i class="fas fa-search fa-sm"></i>
+                    <i class="fa fa-search fa-sm"></i>
                 </button>
             </div>
 
