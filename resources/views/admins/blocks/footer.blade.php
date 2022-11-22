@@ -51,7 +51,7 @@
   
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      Copyright &copy; REW52 {{date('Y')}}
+      Copyright &copy; DMS {{date('Y')}}
     </div>
     <!-- Copyright -->
   </footer>

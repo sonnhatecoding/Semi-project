@@ -8,7 +8,7 @@
     @if(session('msg'))
         <div class="alert alert-success"> {{session('msg')}}</div>
     @endif
-
+    <br>
     <table class="table table-bordered">
         <thead class="thead-light">
             <tr>

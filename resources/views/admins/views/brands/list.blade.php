@@ -9,7 +9,7 @@
     @if(session('msg'))
         <div class="alert alert-success"> {{session('msg')}}</div>
     @endif
-
+    <br>
     <a href="{{route('admin.brand.add')}}" class="btn btn-primary">Add new brand</a>
     <hr>
 

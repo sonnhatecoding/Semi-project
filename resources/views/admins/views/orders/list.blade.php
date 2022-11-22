@@ -8,7 +8,7 @@
     @if(session('msg'))
         <div class="alert alert-success"> {{session('msg')}}</div>
     @endif
-
+    <br>
     <form action="" method="GET" class="mb-3">
         <div class="row">
 

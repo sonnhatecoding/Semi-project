@@ -8,7 +8,7 @@
     @if(session('msg'))
         <div class="alert alert-success"> {{session('msg')}}</div>
     @endif
-
+    <br>
     <a href="{{route('admin.user.add')}} " class="btn btn-primary">Add new user</a>
     <hr>
 
