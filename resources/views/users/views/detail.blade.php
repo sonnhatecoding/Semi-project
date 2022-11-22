@@ -134,16 +134,16 @@
                 <a> <span>Color</span> : {{$productDetail->color_id}}</a>
               </li>
               <li>
-                <a> <span>Ram</span> : {{$productDetail->color_id}}</a>
+                <a> <span>Ram</span> : {{$productDetail->color_id}} GB</a>
               </li>
               <li>
-                <a> <span>Internal memory</span> : {{$productDetail->pro_iMemory}}</a>
+                <a> <span>Internal memory</span> : {{$productDetail->pro_iMemory}} GB</a>
               </li>
               <li>
                 <a> <span>Operating system</span> : {{$productDetail->pro_oSystem}}</a>
               </li>
               <li>
-                <a> <span>Warranty period</span> : {{$productDetail->pro_warrantyPeriod}}</a>
+                <a> <span>Warranty period</span> : {{$productDetail->pro_warrantyPeriod}} Month </a>
               </li>
               <li>
                 <a> <span>Origin</span> : {{$productDetail->pro_origin}}</a>
