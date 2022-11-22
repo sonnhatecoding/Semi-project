@@ -35,14 +35,6 @@
             @enderror
         </div>
 
-        <div class="mb-3">
-            <label for="">Quatity</label>
-            <input type="text" class="form-control" name="iv_quantity" value=" {{$ivDetail->iv_quantity}}">
-            @error('iv_quantity')
-                <span style="color: red">{{$message}} </span>
-            @enderror
-        </div>
-
         <button type="submit" class="btn btn-primary">Update</button>
         <a href="{{route('admin.inventory-vouchers.index')}} " class="btn btn-warning">Back</a>
         @csrf
