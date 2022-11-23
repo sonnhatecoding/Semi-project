@@ -66,7 +66,7 @@
     <li class="nav-item">
         <a class="nav-link" href="{{route('admin.company.index')}}">
             <i class="fas fa-fw fa-table"></i>
-            <span>Company</span></a>
+            <span>Companys</span></a>
     </li>
 
     <!-- Nav Item - Unit -->
