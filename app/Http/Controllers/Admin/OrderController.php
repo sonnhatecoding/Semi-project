@@ -10,7 +10,7 @@ use App\Http\Requests\Admin\OrderRequest;
 
 class OrderController extends Controller
 {
-    const _Per_Page = 7;
+    const _Per_Page = 6;
     public function __construct(){
         $this ->orders = new Order();
     }
