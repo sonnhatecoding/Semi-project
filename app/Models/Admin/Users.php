@@ -28,7 +28,7 @@ class Users extends Model
             $users =$users->where(function($query) use ($keywords){
                 $query->orWhere('user_name', 'LIKE', '%'.$keywords.'%');
                 $query->orWhere('user_email', 'LIKE', '%'.$keywords.'%');
-                $query->orWhere('user_phoneNumber', 'LIKE', '%'.$keywords.'%');
+                $query->orWhere('user_phoneNumber', 'LIKE', $keywords);
             });
         }
 
