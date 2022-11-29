@@ -110,8 +110,7 @@ class FrontEndController extends Controller
     }
 
     public function cart(){
-        $title = 'Cart';
-        return view('users.views.cart', compact('title')) ;
+        return view('users.views.cart');
     }
 
     // public function detail(){
