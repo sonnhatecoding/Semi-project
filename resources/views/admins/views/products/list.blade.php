@@ -11,9 +11,10 @@
     <br>
     <a href="{{route('admin.product.add')}} " class="btn btn-primary">Add new product</a>
     <hr>
-
+<h1>Phan nay Dung lam</h1>
     <form action="" method="GET" class="mb-3">
         <div class="row">
+
 
             <div class="col-1">
                 <select class="form-control" name="brands">
