@@ -58,9 +58,10 @@
                       <li class="nav-item">
                         <a class="nav-link" href="{{route('category')}}">Shop Category</a>
                       </li>
-                      <li class="nav-item">
+                      
+                      {{-- <li class="nav-item">
                         <a class="nav-link" href="checkout.html">Product Checkout</a>
-                      </li>
+                      </li>  khong check out--}}
                       <li class="nav-item">
                         <a class="nav-link" href="{{route('cart')}}">Shopping Cart</a>
                       </li>
