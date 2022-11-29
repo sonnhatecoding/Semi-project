@@ -127,11 +127,11 @@
             <h2>${{$productDetail->pro_reducedPrice}}</h2>
             <ul class="list">
               <li>
-                <a> <span>Brand</span> : {{$productDetail->brand_id}}</a
+                <a> <span>Brand</span> : {{$productDetail->brand_name}}</a
                 >
               </li>
               <li>
-                <a> <span>Color</span> : {{$productDetail->color_id}}</a>
+                <a> <span>Color</span> : {{$productDetail->color_name}}</a>
               </li>
               <li>
                 <a> <span>Ram</span> : {{$productDetail->color_id}} GB</a>

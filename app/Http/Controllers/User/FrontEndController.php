@@ -120,8 +120,6 @@ class FrontEndController extends Controller
 
     public function detail(Request $request,$id = 0){
         $title = 'Detail';
-        $allBrands = getAllBrands();
-        $allColors = getAllColors();
         if(!empty($id)){
             $productDetail = $this->productUser ->getDetail($id);
             if(!empty($productDetail[0])){
@@ -133,7 +131,7 @@ class FrontEndController extends Controller
         }else{
             return redirect()->route('index')->with('msg', 'Link does not exist!');
         }
-        return view('users.views.detail', compact('title','productDetail','allBrands', 'allColors'));
+        return view('users.views.detail', compact('title','productDetail'));
     }
 
     public function category(Request $request){

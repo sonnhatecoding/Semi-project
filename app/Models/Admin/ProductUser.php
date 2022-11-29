@@ -40,6 +40,7 @@ class ProductUser extends Model
     }
 
     public function getDetail($id){
-        return DB::select('SELECT * FROM '.$this ->table.' WHERE pro_id = ?', [$id]);
+        return DB::select('SELECT * FROM '.$this ->table.' INNER JOIN brands ON products.brand_id=brands.brand_id 
+        INNER JOIN colors ON products.color_id=colors.color_id WHERE pro_id = ?', [$id]);
     }
 }
