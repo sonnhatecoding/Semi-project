@@ -111,9 +111,17 @@
                   </li>
 
                   <li class="nav-item">
-                    <a href="#" class="icons">
-                      <i class="ti-user" aria-hidden="true"></i>
-                    </a>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
+                        <a href="#" class="icons">
+                          <i class="ti-user" aria-hidden="true"></i>
+                        </a>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right">
+                          <a href="signin" style="text-decoration: none"><button class="dropdown-item" type="button">Sign in</button></a>
+                          <a href="signup" style="text-decoration: none"><button class="dropdown-item" type="button">Sign up</button></a>
+                      </div>
+                  </div>
                   </li>
 
                   <li class="nav-item">
