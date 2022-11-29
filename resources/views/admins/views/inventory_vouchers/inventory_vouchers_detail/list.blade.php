@@ -19,7 +19,7 @@
                 <th>Color </th>
                 <th>Brand </th>
                 <th>RAM</th>
-                <th>Operating System</th>
+                <th>OS</th>
                 <th>Image </th>
                 <th>Price</th>
                 <th>Quantity</th>

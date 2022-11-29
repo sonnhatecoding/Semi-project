@@ -18,9 +18,9 @@
                 <th>Color</th>
                 <th>Brand</th>
                 <th>RAM</th>
-                <th>Internal memory</th>
-                <th>Operating System</th>
-                <th>Warranty Period</th>
+                <th>IM</th>
+                <th>OS</th>
+                <th>WP</th>
                 <th>Image</th>
                 <th>Price</th>
                 <th>Reduced Price</th>
@@ -35,7 +35,6 @@
                 @foreach ($orderDetailList as $key => $item)           
                     <tr>
                         <td>{{$key+1}} </td>
-                        {{-- <td>{{$item->user_name}}</td> --}}
                         <td>{{$item->pro_name}}</td>
                         <td>{{$item->color_name}}</td>
                         <td><img src="images/brand/{{$item->brand_logo}}" style ="width: 100px;"></td>
