@@ -10,7 +10,6 @@ use App\Http\Requests\Admin\ColorRequest;
 
 class ColorController extends Controller
 {
-    //
     const _Per_Page = 6;
 
     public function __construct(){
@@ -20,7 +19,6 @@ class ColorController extends Controller
     public function index(Request $request){
         $title = 'Colors List';
         $keywords = null;
-        // search
         if(!empty($request->keywords)){
             $keywords = $request ->keywords;
         }
