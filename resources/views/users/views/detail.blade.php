@@ -183,12 +183,6 @@
             </div>
             <div class="card_area">
               <a class="main_btn" href="#">Add to Cart</a>
-              <a class="icon_btn" href="#">
-                <i class="lnr lnr lnr-diamond"></i>
-              </a>
-              <a class="icon_btn" href="#">
-                <i class="lnr lnr lnr-heart"></i>
-              </a>
             </div>
           </div>
         </div>

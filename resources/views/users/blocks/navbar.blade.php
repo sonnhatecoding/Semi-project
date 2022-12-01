@@ -59,9 +59,6 @@
                         <a class="nav-link" href="{{route('category')}}">Product</a>
                       </li>
                       
-                      {{-- <li class="nav-item">
-                        <a class="nav-link" href="checkout.html">Product Checkout</a>
-                      </li>  khong check out--}}
                       <li class="nav-item">
                         <a class="nav-link" href="{{route('cart')}}">Shopping Cart</a>
                       </li>
@@ -123,12 +120,6 @@
                           <a href="signup" style="text-decoration: none"><button class="dropdown-item" type="button">Sign up</button></a>
                       </div>
                   </div>
-                  </li>
-
-                  <li class="nav-item">
-                    <a href="#" class="icons">
-                      <i class="ti-heart" aria-hidden="true"></i>
-                    </a>
                   </li>
                 </ul>
               </div>
