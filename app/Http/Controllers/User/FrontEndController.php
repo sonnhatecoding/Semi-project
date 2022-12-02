@@ -11,7 +11,7 @@ use App\Models\Admin\Product;
 class FrontEndController extends Controller
 {
     //
-    const _Per_Page = 12;
+    const _Per_Page = 6;
 
     public function __construct(){
         $this ->productUser = new ProductUser();
@@ -22,14 +22,17 @@ class FrontEndController extends Controller
         $title = 'Home';
         $filters = [];
         $keywords = null;
+    
         if(!empty($request->brands)){
             $brands = $request ->brands;
             $filters [] = ['products.brand_id', '=', $brands];
         }
+    
         if(!empty($request->colors)){
             $colors = $request ->colors;
             $filters [] = ['products.color_id', '=', $colors];
         }
+    
         if(!empty($request->rams)){
             $rams = $request -> rams;
             if($rams=='2'){
@@ -42,7 +45,8 @@ class FrontEndController extends Controller
                 $rams =8;
             }
             $filters [] = ['products.pro_ram', '=', $rams];
-        }   
+        }
+    
         if(!empty($request->internal_memory)){
             $internal_memory = $request -> internal_memory;
             if($internal_memory=='32'){
@@ -60,6 +64,7 @@ class FrontEndController extends Controller
             }
             $filters [] = ['products.pro_iMemory', '=', $internal_memory];
         }
+    
         if(!empty($request->operating_system)){
             $operating_system = $request -> operating_system;
             if($operating_system=='Android'){
@@ -76,7 +81,8 @@ class FrontEndController extends Controller
                 $operating_system ='Bada';
             }
             $filters [] = ['products.pro_oSystem', '=', $operating_system];
-        }   
+        }
+    
         if(!empty($request->warranty_period)){
             $warranty_period = $request -> warranty_period;
             if($warranty_period=='6'){
@@ -94,6 +100,7 @@ class FrontEndController extends Controller
             }
             $filters [] = ['products.pro_warrantyPeriod', '=', $warranty_period];
         }
+    
         if(!empty($request->keywords)){
             $keywords = $request ->keywords;
         }
@@ -128,6 +135,8 @@ class FrontEndController extends Controller
 
     public function category(Request $request){
         $title = 'Product List';
+        $allBrands = getAllBrands();
+        $allColors = getAllColors();
         $filters = [];
         $keywords = null;
     
