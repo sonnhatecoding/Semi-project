@@ -68,22 +68,4 @@ class OrderController extends Controller
         return redirect()->route('admin.order.index')->with('msg', 'Update order information successfully!');
     }
 
-    public function delete($id =0){
-        if(!empty($id)){
-            $orderDetail =  $this ->orders ->getEdit($id);
-            if(!empty($orderDetail[0])){
-                $deleteOrder = $this ->orders->deleteOrder($id);
-                if($deleteOrder){
-                    $msg = 'Order removal successful!';
-                }else{
-                    $msg = 'You cannot remove the order at this time. Please try again later!';
-                }
-            }else{
-                $msg ='Order does not exist!';
-            }
-        }else{
-            $msg = 'Link does not exist!';
-        }
-        return redirect()->route('admin.order.index')->with('msg', $msg);
-    }
 }
