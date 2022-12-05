@@ -61,7 +61,7 @@
                 <option value="6" {{old('pro_ram')==6?'selected':false}}>6 GB</option>
                 <option value="8" {{old('pro_ram')==8?'selected':false}}>8 GB</option>
             </select>
-            @error('rams')
+            @error('pro_ram')
                 <span style="color: red">{{$message}} </span>
             @enderror
         </div>
