@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\IVDetailController;
 use App\Http\Controllers\User\FrontEndController;
 use App\Http\Controllers\User\SignupController;
 use App\Http\Controllers\User\SigninController;
+use App\Http\Controllers\User\SearchController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,6 +34,7 @@ Route::get('/cart', [FrontEndController::class, 'cart'])->name('cart');
 Route::get('detail/{id}', [FrontEndController::class, 'detail'])->name('detail');
 Route::get('category', [FrontEndController::class, 'category'])->name('category');
 
+Route::get('search', [SearchController::class, 'search'])->name('search');
 
 
 //signup
