@@ -21,7 +21,7 @@ class ProductUser extends Model
         ->join('colors', 'products.color_id', '=', 'colors.color_id')
         ->join('brands', 'products.brand_id', '=', 'brands.brand_id')
         ->orderBy('products.pro_name', 'ASC')
-        ->limit(6)
+        ->limit(3)
         ->offSet(1);
 
         if(!empty($filters)){

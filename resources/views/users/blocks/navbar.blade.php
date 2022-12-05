@@ -52,16 +52,13 @@
                     <a class="nav-link" href="{{route('index')}}">Home</a>
                   </li>
                   <li class="nav-item submenu dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                       aria-expanded="false">Smartphones</a>
                     <ul class="dropdown-menu">
                       <li class="nav-item">
-                        <a class="nav-link" href="{{route('category')}}">Shop Category</a>
+                        <a class="nav-link" href="{{route('category')}}">Product</a>
                       </li>
                       
-                      {{-- <li class="nav-item">
-                        <a class="nav-link" href="checkout.html">Product Checkout</a>
-                      </li>  khong check out--}}
                       <li class="nav-item">
                         <a class="nav-link" href="{{route('cart')}}">Shopping Cart</a>
                       </li>
@@ -130,12 +127,6 @@
                           <a href="signup" style="text-decoration: none"><button class="dropdown-item" type="button">Sign up</button></a>
                       </div>
                   </div>
-                  </li>
-
-                  <li class="nav-item">
-                    <a href="#" class="icons">
-                      <i class="ti-heart" aria-hidden="true"></i>
-                    </a>
                   </li>
                 </ul>
               </div>

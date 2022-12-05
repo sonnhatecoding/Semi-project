@@ -35,7 +35,6 @@ function getAllProducts(){
 
 function getProductsUser(){
     $products = new ProductUser();
-     $l = $products->getProductsUser();
-     //dd($l);
-     return $l;
+     $products = $products->getProductsUser();
+     return $products;
 }

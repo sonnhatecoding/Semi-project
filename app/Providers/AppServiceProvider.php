@@ -14,8 +14,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
-        // lệnh này cho phép chạy tất cả các file trong app/Helpers
         foreach (glob(app_path('Helpers') . '/*.php') as $file) {
             require_once $file;
         }
@@ -29,7 +27,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
         Paginator::useBootstrap();
     }
 }

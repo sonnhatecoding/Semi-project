@@ -29,6 +29,7 @@ use App\Http\Controllers\User\SearchController;
 |
 */
 
+<<<<<<< HEAD
 Route::get('/', [FrontEndController::class, 'index'])->name('index');
 Route::get('/cart', [FrontEndController::class, 'cart'])->name('cart');
 Route::get('detail/{id}', [FrontEndController::class, 'detail'])->name('detail');
@@ -37,14 +38,26 @@ Route::get('category', [FrontEndController::class, 'category'])->name('category'
 Route::get('search', [SearchController::class, 'search'])->name('search');
 
 
+=======
+>>>>>>> f787e83b93324a183fb78e9ad957765a7929dc83
 //signup
 Route::get('/signup', [SignupController::class, 'getRegister'])->name('signup');//ds
 Route::post('/signup', [SignupController::class, 'postRegister']);//ds
 Route::get('/signin', [SigninController::class, 'getSignin'])->name('signin');//ds
 Route::post('/signin', [SigninController::class, 'postSignin']);//ds
 
+Route::get('/cart', [FrontEndController::class, 'cart'])->name('cart');
+
+// Home page
+Route::get('/', [FrontEndController::class, 'index'])->name('index');
+// Product detail
+Route::get('detail/{id}', [FrontEndController::class, 'detail'])->name('detail');
+// Products 
+Route::get('category', [FrontEndController::class, 'category'])->name('category');
+
 // Admin
 Route::prefix('admin')->name('admin.')->group(function(){
+    // Dashboard
     Route::get('/', [MyController::class, 'index'])->name('index');
 
     // manage Users
@@ -57,7 +70,7 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::get('delete/{id}', [UserController::class, 'delete'])->name('delete');
     });
 
-    // manage Company
+    // manage Companys
     Route::prefix('company')->name('company.')->group(function(){
         Route::get('/', [CompanyController::class, 'index'])->name('index');
         Route::get('add', [CompanyController::class, 'getAdd'])->name('add');
@@ -108,9 +121,11 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::get('delete/{id}', [ProductController::class, 'delete'])->name('delete');
     });
 
-    // manage orders
+    // Manage Orders
     Route::prefix('order')->name('order.')->group(function(){
         Route::get('/', [OrderController::class, 'index'])->name('index');
+        Route::get('edit/{id}', [OrderController::class, 'getEdit'])->name('edit');
+        Route::post('update', [OrderController::class, 'postEdit'])->name('postEdit');
         // manage order detail
         Route::prefix('order-detail')->name('order-detail.')->group(function(){
             Route::get('/{id}', [OrderDetailController::class, 'index'])->name('index');
@@ -118,26 +133,21 @@ Route::prefix('admin')->name('admin.')->group(function(){
             Route::post('update', [OrderDetailController::class, 'postEdit'])->name('postEdit');
             Route::get('delete/{id}', [OrderDetailController::class, 'delete'])->name('delete');
         });
-        Route::get('edit/{id}', [OrderController::class, 'getEdit'])->name('edit');
-        Route::post('update', [OrderController::class, 'postEdit'])->name('postEdit');
-        Route::get('delete/{id}', [OrderController::class, 'delete'])->name('delete');
     });
 
     // manage Inventory Vouchers
     Route::prefix('inventory-vouchers')->name('inventory-vouchers.')->group(function(){
         Route::get('/', [InventoryVouchersController::class, 'index'])->name('index');
-        // manage InventoryVouchers detail
+        Route::get('edit/{id}', [InventoryVouchersController::class, 'getEdit'])->name('edit');
+        Route::post('update', [InventoryVouchersController::class, 'postEdit'])->name('postEdit');
+        // manage Inventory voucher detail
         Route::prefix('inventory-vouchers-detail')->name('inventory-vouchers-detail.')->group(function(){
             Route::get('/{id}', [IVDetailController::class, 'index'])->name('index');
             Route::get('edit/{id}', [IVDetailController::class, 'getEdit'])->name('edit');
             Route::post('update', [IVDetailController::class, 'postEdit'])->name('postEdit');
             Route::get('delete/{id}', [IVDetailController::class, 'delete'])->name('delete');
         });
-        Route::get('edit/{id}', [InventoryVouchersController::class, 'getEdit'])->name('edit');
-        Route::post('update', [InventoryVouchersController::class, 'postEdit'])->name('postEdit');
-        Route::get('delete/{id}', [InventoryVouchersController::class, 'delete'])->name('delete');
-    });
-    
+    }); 
 });
 
 

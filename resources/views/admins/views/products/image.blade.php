@@ -47,4 +47,5 @@
             @endif
         </tbody>
     </table>
+    <a href="{{route('admin.product.index')}} " class="btn btn-warning">Back</a>
 @endsection

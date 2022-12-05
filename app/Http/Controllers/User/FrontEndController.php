@@ -11,7 +11,7 @@ use App\Models\Admin\Product;
 class FrontEndController extends Controller
 {
     //
-    const _Per_Page = 12;
+    const _Per_Page = 6;
 
     public function __construct(){
         $this ->productUser = new ProductUser();
