@@ -63,7 +63,7 @@
                     </div>
                     <div class="form-group">
                         <input type="submit" name="submit" id="submit" class="form-submit submit" value="Sign up"/>
-                        <a href="" class="submit-link submit">Sign in</a>
+
                     </div>
                 </form>
             </div>

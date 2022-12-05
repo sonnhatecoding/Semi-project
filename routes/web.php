@@ -29,17 +29,6 @@ use App\Http\Controllers\User\SearchController;
 |
 */
 
-<<<<<<< HEAD
-Route::get('/', [FrontEndController::class, 'index'])->name('index');
-Route::get('/cart', [FrontEndController::class, 'cart'])->name('cart');
-Route::get('detail/{id}', [FrontEndController::class, 'detail'])->name('detail');
-Route::get('category', [FrontEndController::class, 'category'])->name('category');
-
-Route::get('search', [SearchController::class, 'search'])->name('search');
-
-
-=======
->>>>>>> f787e83b93324a183fb78e9ad957765a7929dc83
 //signup
 Route::get('/signup', [SignupController::class, 'getRegister'])->name('signup');//ds
 Route::post('/signup', [SignupController::class, 'postRegister']);//ds
