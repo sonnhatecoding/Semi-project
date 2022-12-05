@@ -97,9 +97,16 @@
               <div class="col-lg-5 pr-0">
                 <ul class="nav navbar-nav navbar-right right_nav pull-right">
                   <li class="nav-item">
-                    <a href="#" class="icons">
-                      <i class="ti-search" aria-hidden="true"></i>
-                    </a>
+                      <form role="search" method="get"  action="{{asset('search/')}}">
+                          <div class="input-group">
+                              <input type="text" name="key" class="form-control" name="" placeholder="Search for products">
+                              <div class="input-group-append">
+                                  <button type="submit" class="input-group-text bg-transparent text-primary">
+                                      <i class="fa fa-search"></i>   
+                                  </button>
+                              </div>
+                          </div>
+                      </form>
                   </li>
 
                   <li class="nav-item">
