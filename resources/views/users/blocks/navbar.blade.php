@@ -107,7 +107,6 @@
                               </div>
                           </div>
                       </form>
-                      {{-- style="margin-top: 7%" --}}
                   </li>
 
                   <li class="nav-item">

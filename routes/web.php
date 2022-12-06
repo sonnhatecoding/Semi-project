@@ -35,6 +35,7 @@ Route::post('/signup', [SignupController::class, 'postRegister']);//ds
 Route::get('/signin', [SigninController::class, 'getSignin'])->name('signin');//ds
 Route::post('/signin', [SigninController::class, 'postSignin']);//ds
 
+Route::get('/search', [SearchController::class, 'search'])->name('search');
 Route::get('/cart', [FrontEndController::class, 'cart'])->name('cart');
 
 // Home page
