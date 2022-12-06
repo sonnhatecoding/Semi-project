@@ -158,15 +158,6 @@
   </header>
   <!--================Header Menu Area =================-->
 
-  <!--================Home Banner Area =================-->
-  
-
-  <!--================End Home Banner Area =================-->
-
-  <!-- Start feature Area -->
-
-  <!-- End feature Area -->
-
   <!--================ Feature Product Area =================-->
   
   <!--================ End Feature Product Area =================-->
