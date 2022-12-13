@@ -13,7 +13,7 @@ class EditCartController extends Controller
     public function updatecart(Request $request)
     {
         if ($request->id and $request->id) {
-            $cart = session()->get('cart');
+            $cart = session()->get('cart');//edit cart controller
 
             $cart[$request->id]["pQuantity"] = $request->pQuantity;
 
