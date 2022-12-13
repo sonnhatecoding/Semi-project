@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class CartProductModel extends Model
 {
     use HasFactory;
-    public $table ="products"; //ddfsdfs
+    public $table ="products"; //tro vao bang product
     public $primaryKey = 'pro_id'; 
     public $fillable = 
     [
