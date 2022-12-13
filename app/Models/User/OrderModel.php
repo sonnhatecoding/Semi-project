@@ -14,5 +14,5 @@ class OrderModel extends Model
     [
         'user_name', 'user_phoneNumber','user_email','user_password','user_address','user_status','user_orderAt'
     ];
-    public $timestamps = false; 
+    public $timestamps = false; //time staps
 }
