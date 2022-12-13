@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class OrderModel extends Model
 {
     //usermodel
-    public $table ="usersOrder"; ///dds
+    public $table ="usersOrder"; //show user oder
     public $primaryKey = 'user_id';
     public $fillable = 
     [
