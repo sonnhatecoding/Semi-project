@@ -121,7 +121,7 @@
                         <a href="{{route('detail', ['id' => $item->pro_id])}}">
                           <i class="ti-eye"></i>
                         </a>
-                        <a href="cart">
+                        <a href="{{asset('cart/add-to-cart/'.$item->pro_id)}}">
                           <i class="ti-shopping-cart"></i>
                         </a>
                       </div>

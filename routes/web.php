@@ -18,6 +18,7 @@ use App\Http\Controllers\User\FrontEndController;
 use App\Http\Controllers\User\SignupController;
 use App\Http\Controllers\User\SigninController;
 use App\Http\Controllers\User\SearchController;
+use App\Http\Controllers\User\CartController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,7 +37,20 @@ Route::get('/signin', [SigninController::class, 'getSignin'])->name('signin');//
 Route::post('/signin', [SigninController::class, 'postSignin']);//ds
 
 Route::get('/search', [SearchController::class, 'search'])->name('search');
-Route::get('/cart', [FrontEndController::class, 'cart'])->name('cart');
+Route::get('cart/', [FrontEndController::class, 'cart'])->name('cart');
+
+// route add to cart
+Route::group(['prefix' =>'cart'], function()
+{
+    Route::get('ShoppingCart/',[CartController::class,'cart'])->name('cart');
+        
+    Route::get('add-to-cart/{id}',[CartController::class,'addtocart'])->name('addtocart');
+
+    Route::post('/update-cart/{id}',[CartController::class,'updatecart'])->name('updatecart');
+
+    Route::delete('deletecart/{id}',[CartController::class,'delete']);
+        
+});
 
 // Home page
 Route::get('/', [FrontEndController::class, 'index'])->name('index');

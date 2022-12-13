@@ -11,7 +11,7 @@ class SearchController extends Controller
     //
     public function search(Request $request)
     {
-        $ProductSearch = ProductModel::WHERE('pro_name','like','%'.$request->key.'%')
+        $ProductSearch = CartProductModel::WHERE('pro_name','like','%'.$request->key.'%')
                                         ->orWhere('pro_price',$request->key)
                                         ->get();
 

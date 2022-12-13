@@ -1,264 +1,272 @@
-@extends('layouts.user')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
-<!--================Home Banner Area =================-->
-<section class="banner_area">
-    <div class="banner_inner d-flex align-items-center">
+<head>
+  <!-- Required meta tags -->
+  <base href="{{asset('')}}">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+  <title>Search Page</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/user/css/bootstrap.css" />
+  <link rel="stylesheet" href="assets/user/vendors/linericon/style.css" />
+  <link rel="stylesheet" href="assets/user/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="assets/user/css/themify-icons.css" />
+  <link rel="stylesheet" href="assets/user/css/flaticon.css" />
+  <link rel="stylesheet" href="assets/user/vendors/owl-carousel/owl.carousel.min.css" />
+  <link rel="stylesheet" href="assets/user/vendors/lightbox/simpleLightbox.css" />
+  <link rel="stylesheet" href="assets/user/vendors/nice-select/css/nice-select.css" />
+  <link rel="stylesheet" href="assets/user/vendors/animate-css/animate.css" />
+  <link rel="stylesheet" href="assets/user/vendors/jquery-ui/jquery-ui.css" />
+  <!-- main css -->
+  <link rel="stylesheet" href="assets/user/css/style.css" />
+  <link rel="stylesheet" href="assets/user/css/responsive.css" />
+
+  <style>
+    
+  </style>
+</head>
+
+<body>
+  <!--================Header Menu Area =================-->
+  <header class="header_area">
+    <div class="top_menu">
       <div class="container">
-        <div
-          class="banner_content d-md-flex justify-content-between align-items-center"
-        >
-          <div class="mb-3 mb-md-0">
-            <h2>Cart</h2>
-            <p>Very us move be blessed multiply night</p>
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="float-left">
+              <p>Phone: +84 888 888 888</p>
+              <p>email: dmshuongnoi@gmail.com</p>
+            </div>
           </div>
-          <div class="page_link">
-            <a href="index.html">Home</a>
-            <a href="cart.html">Cart</a>
+          <div class="col-lg-5">
+            <div class="float-right">
+              <ul class="right_side">
+                <li>
+                  <a href="cart.html">
+                    gift card
+                  </a>
+                </li>
+                <li>
+                  <a href="tracking.html">
+                    track order
+                  </a>
+                </li>
+                <li>
+                  <a href="contact.html">
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <!--================End Home Banner Area =================-->
-<section class="cart_area">
-    <div class="container">
-      <div class="cart_inner">
-        <div class="table-responsive">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Product</th>
-                <th scope="col">Price</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="media">
-                    <div class="d-flex">
-                      <img
-                        src="img/product/single-product/cart-1.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="media-body">
-                      <p>Minimalistic shop for multipurpose use</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <h5>$360.00</h5>
-                </td>
-                <td>
-                  <div class="product_count">
-                    <input
-                      type="text"
-                      name="qty"
-                      id="sst"
-                      maxlength="12"
-                      value="1"
-                      title="Quantity:"
-                      class="input-text qty"
-                    />
-                    <button
-                      onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                      class="increase items-count"
-                      type="button"
-                    >
-                      <i class="lnr lnr-chevron-up"></i>
-                    </button>
-                    <button
-                      onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                      class="reduced items-count"
-                      type="button"
-                    >
-                      <i class="lnr lnr-chevron-down"></i>
-                    </button>
-                  </div>
-                </td>
-                <td>
-                  <h5>$720.00</h5>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="media">
-                    <div class="d-flex">
-                      <img
-                        src="img/product/single-product/cart-1.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="media-body">
-                      <p>Minimalistic shop for multipurpose use</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <h5>$360.00</h5>
-                </td>
-                <td>
-                  <div class="product_count">
-                    <input
-                      type="text"
-                      name="qty"
-                      id="sst"
-                      maxlength="12"
-                      value="1"
-                      title="Quantity:"
-                      class="input-text qty"
-                    />
-                    <button
-                      onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                      class="increase items-count"
-                      type="button"
-                    >
-                      <i class="lnr lnr-chevron-up"></i>
-                    </button>
-                    <button
-                      onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                      class="reduced items-count"
-                      type="button"
-                    >
-                      <i class="lnr lnr-chevron-down"></i>
-                    </button>
-                  </div>
-                </td>
-                <td>
-                  <h5>$720.00</h5>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="media">
-                    <div class="d-flex">
-                      <img
-                        src="img/product/single-product/cart-1.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="media-body">
-                      <p>Minimalistic shop for multipurpose use</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <h5>$360.00</h5>
-                </td>
-                <td>
-                  <div class="product_count">
-                    <input
-                      type="text"
-                      name="qty"
-                      id="sst"
-                      maxlength="12"
-                      value="1"
-                      title="Quantity:"
-                      class="input-text qty"
-                    />
-                    <button
-                      onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                      class="increase items-count"
-                      type="button"
-                    >
-                      <i class="lnr lnr-chevron-up"></i>
-                    </button>
-                    <button
-                      onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                      class="reduced items-count"
-                      type="button"
-                    >
-                      <i class="lnr lnr-chevron-down"></i>
-                    </button>
-                  </div>
-                </td>
-                <td>
-                  <h5>$720.00</h5>
-                </td>
-              </tr>
-              <tr class="bottom_button">
-                <td>
-                  <a class="gray_btn" href="#">Update Cart</a>
-                </td>
-                <td></td>
-                <td></td>
-                <td>
-                  <div class="cupon_text">
-                    <input type="text" placeholder="Coupon Code" />
-                    <a class="main_btn" href="#">Apply</a>
-                    <a class="gray_btn" href="#">Close Coupon</a>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td>
-                  <h5>Subtotal</h5>
-                </td>
-                <td>
-                  <h5>$2160.00</h5>
-                </td>
-              </tr>
-              <tr class="shipping_area">
-                <td></td>
-                <td></td>
-                <td>
-                  <h5>Shipping</h5>
-                </td>
-                <td>
-                  <div class="shipping_box">
-                    <ul class="list">
-                      <li>
-                        <a href="#">Flat Rate: $5.00</a>
+    <div class="main_menu">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light w-100">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <a class="navbar-brand logo_h" href="index.html">
+            <img src="img/logo.png" alt="" />
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse offset w-100" id="navbarSupportedContent">
+            <div class="row w-100 mr-0">
+              <div class="col-lg-7 pr-0">
+                <ul class="nav navbar-nav center_nav pull-right">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{{route('index')}}">Home</a>
+                  </li>
+                  <li class="nav-item submenu dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                      aria-expanded="false">Smartphones</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{route('category')}}">Product</a>
                       </li>
-                      <li>
-                        <a href="#">Free Shipping</a>
-                      </li>
-                      <li>
-                        <a href="#">Flat Rate: $10.00</a>
-                      </li>
-                      <li class="active">
-                        <a href="#">Local Delivery: $2.00</a>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{route('cart')}}">Shopping Cart</a>
                       </li>
                     </ul>
-                    <h6>
-                      Calculate Shipping
-                      <i class="fa fa-caret-down" aria-hidden="true"></i>
-                    </h6>
-                    <select class="shipping_select">
-                      <option value="1">Bangladesh</option>
-                      <option value="2">India</option>
-                      <option value="4">Pakistan</option>
-                    </select>
-                    <select class="shipping_select">
-                      <option value="1">Select a State</option>
-                      <option value="2">Select a State</option>
-                      <option value="4">Select a State</option>
-                    </select>
-                    <input type="text" placeholder="Postcode/Zipcode" />
-                    <a class="gray_btn" href="#">Update Details</a>
-                  </div>
-                </td>
-              </tr>
-              <tr class="out_button_area">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                  <div class="checkout_btn_inner">
-                    <a class="gray_btn" href="#">Continue Shopping</a>
-                    <a class="main_btn" href="#">Proceed to checkout</a>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+                  </li>
+                  <li class="nav-item submenu dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                      aria-expanded="false">Blog</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="single-blog.html">Blog Details</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item submenu dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                      aria-expanded="false">Pages</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="tracking.html">Tracking</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="elements.html">Elements</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{route('admin.index')}}">Admin</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-lg-5 pr-0">
+                <ul class="nav navbar-nav navbar-right right_nav pull-right">
+                  <li class="nav-item">
+                    <a href="#" class="icons">
+                      <i class="ti-search" aria-hidden="true"></i>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{{route('cart')}}" class="icons">
+                      <i class="ti-shopping-cart"></i>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="#" class="icons">
+                      <i class="ti-user" aria-hidden="true"></i>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="#" class="icons">
+                      <i class="ti-heart" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
     </div>
+  </header>
+  <!--================Header Menu Area =================-->
+
+  <!--================ Feature Product Area =================-->
+  
+  <!--================ End Feature Product Area =================-->
+
+  <!--================ Offer Area =================-->
+  
+  <!--================ End Offer Area =================-->
+
+  <!--================ New Product Area =================-->
+  
+  <!--================ End New Product Area =================-->
+
+  <!--================ Inspired Product Area =================-->
+  <section class="inspired_product_area section_gap_bottom_custom">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="main_title">
+            <h2><span>Products</span></h2>
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <!--================ start contents =================-->
+      <section class="vh-100" style="background-color: #fdccbc;">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <p><span class="h2">Shopping Cart </span><span class="h4"></span></p>
+
+        <div class="card mb-4">
+          <div class="card-body p-4">
+            <?php $total = 0 ?>
+              @if(session('cart'))
+                @foreach((array) session('cart') as $id => $details)
+                  <?php $total += $details['pro_price'] * $details['pro_quatity'] ?>
+                    <div class="row align-items-center">
+                      <div class="col-md-2">
+                        <img src="{{asset('images/product/'.$details['pro_image'])}}"
+                          class="img-fluid" alt="Generic placeholder image">
+                      </div>
+                      <div class="col-md-2 d-flex justify-content-center">
+                        <div>
+                          <p class="small text-muted mb-4 pb-2">Name</p>
+                          <p class="lead fw-normal mb-0">{{$details['pro_name']}}</p>
+                        </div>
+                      </div>
+
+                      <div class="col-md-2 d-flex justify-content-center">
+                        <div>
+                          <p class="small text-muted mb-4 pb-2">Quantity</p>
+                          <p class="lead fw-normal mb-0">{{$details['pro_quatity']}}</p>
+                        </div>
+                      </div>
+                      <div class="col-md-2 d-flex justify-content-center">
+                        <div>
+                          <p class="small text-muted mb-4 pb-2">Price</p>
+                          <p class="lead fw-normal mb-0">${{$details['pro_price']}}</p>
+                        </div>
+                      </div>
+                      <div class="col-md-2 d-flex justify-content-center">
+                        <div>
+                          <p class="small text-muted mb-4 pb-2">Total</p>
+                          <p class="lead fw-normal mb-0">&nbsp &nbsp ${{$details['pro_price'] * $details['pro_quatity']}}</p>
+                        </div>
+                      </div>
+                    </div>
+                @endforeach
+              @endif
+          </div>
+        </div>
+
+        <div class="card mb-5">
+          <div class="card-body p-4">
+
+            <div class="float-end">
+              <p class="mb-0 me-5 d-flex align-items-center">
+                <span class="small text-muted me-2">Order total:</span> <span
+                  class="lead fw-normal">&nbsp &nbsp ${{$details['pro_price'] * $details['pro_quatity']}}</span>
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-end">
+          <button type="button" class="btn btn-light btn-lg me-2">Continue shopping</button>
+          <button type="button" class="btn btn-primary btn-lg">Add to cart</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+      <!--================ end contents =================-->
+
+    </div>
   </section>
-@endsection
+  <!--================ End Inspired Product Area =================-->
+
+  <!--================ Start Blog Area =================-->
+
+  <!--================ End Blog Area =================-->
+@INCLUDE('users.blocks.footer')
+@INCLUDE('users.blocks.js')
+
+ 

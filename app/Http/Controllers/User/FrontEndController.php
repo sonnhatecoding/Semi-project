@@ -110,6 +110,7 @@ class FrontEndController extends Controller
     }
 
     public function cart(){
+        
         return view('users.views.cart');
     }
 
