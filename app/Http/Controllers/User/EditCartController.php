@@ -17,7 +17,7 @@ class EditCartController extends Controller
 
             $cart[$request->id]["pQuantity"] = $request->pQuantity;
 
-            session()->put('cart', $cart);
+            session()->put('cart', $cart);//sesion cart
 
             $subTotal = $cart[$request->id]['pQuantity'] * $cart[$request->id]['pPrice'];
 
