@@ -21,7 +21,7 @@ class EditCartController extends Controller
 
             $subTotal = $cart[$request->id]['pQuantity'] * $cart[$request->id]['pPrice'];
 
-            $total = $this->getCartTotal();
+            $total = $this->getCartTotal();// total cart
 
             dd($cart);
 
